@@ -113,9 +113,8 @@ class ECCVGenerator(BaseColor):
 def eccv16_test(pretrained=True):
 	model = ECCVGenerator()
 	if(pretrained):
-		import torch.utils.model_zoo as model_zoo
+		
         
-		model.load_state_dict(torch.load('colornet_weights.pth'))   #colornet_weights.pth   colornet_params.pth
-        #   model.load_state_dict(torch.load('colornet_params.pkl'))
+		model.load_state_dict(torch.load('colornet_params.pth'))   #colornet_weights.pth   colornet_params.pth
+        
 	return model
-# model_zoo.load_url('https://colorizers.s3.us-east-2.amazonaws.com/colorization_release_v2-9b330a0b.pth',map_location='cpu',check_hash=True)
